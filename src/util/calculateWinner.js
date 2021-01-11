@@ -12,10 +12,12 @@ function calculateWinner(squares) {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+      // alteramos o retorno dessa função para trazer o jogador vencedor (se houver)
+      // e também quais quadrados formaram a jogada que venceu (se houver)
+      return { winner: squares[a], winningSequence: lines[i] };
     }
   }
-  return null;
+  return {};
 }
 
 export default calculateWinner;

@@ -14,13 +14,13 @@ Minimamente, a aplicação deve atender aos seguintes requisitos:
 - exibir o status atual do jogo:
   - se o jogo não estiver finalizado, exibir qual o próximo jogador (X ou O);
   - se o jogo estiver finalizado, exibir o resultado (empate ou vencedor), destacando os espaços que formam a sequência vencedora (por exemplo, mudando a cor ou espessura da borda ou background);
-- exibir um botão para reiniciar o jogo a qualquer momento. Deve ser acessível pela navegação de forma intuitiva, por exemplo, se o botão estiver posicionado abaixo do tabuleiro e o foco da navegação estiver em um dos 3 campos inferiores do tabuleiro, pressionar ⬇️ deve focar o botão. Da mesma forma se o foco estiver no botão, pressionar ⬆️ deve voltar o foco para a linha inferior do tabuleiro;
 - estilizar a aplicação levando em conta as considerações de UX vistas na apresentação: contraste, controle de foco, distância da tela, etc.
 
 ## Objetivos bônus
 
 Caso conclua todos os requisitos acima com tempo de sobra, tente cumprir os objetivos bônus abaixo:
 
+- exibir um botão para reiniciar o jogo a qualquer momento. Deve ser acessível pela navegação de forma intuitiva, por exemplo, se o botão estiver posicionado abaixo do tabuleiro e o foco da navegação estiver em um dos 3 campos inferiores do tabuleiro, pressionar ⬇️ deve focar o botão. Da mesma forma se o foco estiver no botão, pressionar ⬆️ deve voltar o foco para a linha inferior do tabuleiro;
 - ao iniciar um jogo, permitir escolher entre um jogador contra "a máquina" (computador jogando aleatoriamente) ou dois jogadores reais (conforme já implementado)
 - "antecipar" os resultados, ou seja:
   - se não há mais jogadas possíveis para nenhum jogador que levem à vitória, o empate deve ser declarado imediatamente;

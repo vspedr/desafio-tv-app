@@ -1,0 +1,28 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.game-info {
+  font-size: 1.5em;
+  margin: 1em;
+  font-weight: bold;
+}
+
+.restart-button {
+  border: 8px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 0.5em;
+  margin: 1em;
+
+  line-height: normal;
+  font-size: 1em;
+  font-weight: bold;
+  color: #d9d9d9;
+}
+
+.restart-button-focused {
+  background-color: #d9d9d9;
+  color: #0a0908;
+}

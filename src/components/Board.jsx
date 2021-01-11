@@ -1,37 +1,47 @@
-import React, { Component } from "react";
+import React from "react";
 import Square from "./Square";
+import { getSquareIdFromIndex } from "../util/square";
 
-class Board extends Component {
-  renderSquare(i) {
+const Board = (props) => {
+  const isSquareFocused = (i) =>
+    props.focusedElement === getSquareIdFromIndex(i);
+
+  const renderSquare = (i) => {
     return (
       <Square
-        value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)}
+        // identificador único do quadrado
+        id={getSquareIdFromIndex(i)}
+        // X, O ou vazio
+        value={props.squares[i]}
+        // ação ao clicar/pressionar enter naquele quadrado
+        onClick={() => props.onClick(i)}
+        // determina se o quadrado faz parte da jogada vencedora
+        isWinning={props.winningSequence.includes(i)}
+        // determina se o quadrado está focado no momento
+        isFocused={isSquareFocused(i)}
       />
     );
-  }
+  };
 
-  render() {
-    return (
-      <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+  return (
+    <div>
+      <div className="board-row">
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
       </div>
-    );
-  }
-}
+      <div className="board-row">
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+      </div>
+      <div className="board-row">
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
+  );
+};
 
 export default Board;
