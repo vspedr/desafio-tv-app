@@ -42,3 +42,17 @@ Atente-se aos requisitos (nem todos já estão contemplados), foque mais nos asp
 Nossa sugestão é utilizar as props dos componentes para indicar quando um elemento está selecionado ou não. Use `eventListeners` para implementar a lógica de navegação pelo teclado com os eventos `keydown` e pelo mouse/magic remote com os eventos `mouseenter`, `mouseleave` e `click`.
 
 Fique à vontade para modificar a estrutura de arquivos e adicionar pacotes conforme achar necessário (mas leve em consideração as limitações da TV).
+
+## Comandos
+
+### 1. Instalar dependências
+
+`npm install`
+
+Deve ser executado da primeira vez após clonar esse repositório para seu computador.
+
+### 2. Executar o app
+
+`npm start`
+
+Isso irá automaticamente abrir seu navegador em [http://localhost:3000](http://localhost:3000), mostrando a app em modo desenvolvimento. As alterações que você fizer no código serão refletidas automaticamente.
